@@ -2,6 +2,10 @@ package webArchitecture.persona.v0.views.beans;
 
 import java.io.Serializable;
 
+import org.apache.logging.log4j.LogManager;
+
+import webArchitecture.persona.v1.viewsBeans.PersonaView;
+
 public class PersonaBean implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -14,10 +18,10 @@ public class PersonaBean implements Serializable {
     public PersonaBean() {
     }
 
-    public PersonaBean(int id, String nombre, String[] caras) {
+    public PersonaBean(int id, String nombre, String[] roles) {
         this.id = id;
         this.nombre = nombre;
-        this.roles = caras;
+        this.roles = roles;
     }
 
     public int getId() {
@@ -45,6 +49,8 @@ public class PersonaBean implements Serializable {
     }
 
     public void process() {
+        LogManager.getLogger(PersonaView.class).debug(
+                "Se procesa la petición...");
         if (this.nombre == null) {
             this.nombre = "Demonio";
             this.id = 666;
