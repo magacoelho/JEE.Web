@@ -11,7 +11,7 @@
 	<h2>Vista de <b>Persona</b></h2>
 	<c:set var="pView" scope="request" value="${persona}" />
 	<c:set var="rView" scope="session" value="${rol}" />
-	<form action="/ServletsJSPJDBC/v1/persona" method="post">
+	<form action="/WebJSP/v1/persona" method="post">
 		<p>
 			Id: <input name="id" type="text" value="${pView.persona.id}" />
 		</p>
@@ -31,7 +31,7 @@
 		</p>
 	</form>
 	<p>
-		<a href="/ServletsJSPJDBC/v1/home">Volver a Home</a>
+		<a href="/WebJSP/v1/home">Volver a Home</a>
 	</p>
 </body>
 </html>

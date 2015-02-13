@@ -10,7 +10,7 @@
 <body>
 	<h1>Vista de <b>Rol</b></h1>
 	<c:set var="rView" scope="request" value="${rol}" />
-	<form action="/ServletsJSPJDBC/v1/rol" method="post">
+	<form action="/WebJSP/v1/rol" method="post">
 		<p>Rol actuales:</p>
 		<ul>
 			<c:forEach var="rol" items="${rView.roles}">
@@ -24,6 +24,6 @@
 			<input type="submit" value="Enviar" />
 		</p>
 	</form>
-    <p><a href="/ServletsJSPJDBC/v1/home">Volver a Home</a></p>
+    <p><a href="/WebJSP/v1/home">Volver a Home</a></p>
 </body>
 </html>

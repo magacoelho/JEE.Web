@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Home Persona: V1</h1>
-    <p><a href="/ServletsJSPJDBC/v1/persona">Vista de Persona</a></p>
-    <p><a href="/ServletsJSPJDBC/v1/rol">Vista de Rol</a></p>
+    <p><a href="/WebJSP/v1/persona">Vista de Persona</a></p>
+    <p><a href="/WebJSP/v1/rol">Vista de Rol</a></p>
 </body>
 </html>
