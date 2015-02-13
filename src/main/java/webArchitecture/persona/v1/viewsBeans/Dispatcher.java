@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import webArchitecture.persona.v1.models.entities.Persona;
 
 @WebServlet("/v1/*")
-// En 3.0 se utilizan anotaciones en lugar de XML
 public class Dispatcher extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

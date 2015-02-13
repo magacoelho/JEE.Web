@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import webArchitecture.persona.v1.models.entities.Persona;
 
 public class PersonaView {
-    private String msg;
+    private String errorMsg;
 
     private Persona persona;
 
@@ -14,8 +14,8 @@ public class PersonaView {
     public PersonaView() {
     }
 
-    public String getMsg() {
-        return msg;
+    public String getErrorMsg() {
+        return errorMsg;
     }
 
     public Persona getPersona() {
@@ -42,7 +42,7 @@ public class PersonaView {
 
     public String process() {
         if (this.persona.getId() == 666 && !this.persona.getNombre().equals("Demonio")) {
-            this.msg = "Sólo se acepta el nombre 'Demonio'";
+            this.errorMsg = "Sólo se acepta el nombre 'Demonio'";
             return "persona";
         } else {
             LogManager.getLogger(PersonaView.class).debug(
