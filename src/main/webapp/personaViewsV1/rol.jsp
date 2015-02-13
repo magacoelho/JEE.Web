@@ -10,6 +10,7 @@
 <body>
 	<h1>Vista de <b>Rol</b></h1>
 	<c:set var="rView" scope="request" value="${rol}" />
+    <div>${rView.update()}</div>
 	<form action="/WebJSP/v1/rol" method="post">
 		<p>Rol actuales:</p>
 		<ul>

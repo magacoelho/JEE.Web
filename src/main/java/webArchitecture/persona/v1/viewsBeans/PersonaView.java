@@ -1,5 +1,7 @@
 package webArchitecture.persona.v1.viewsBeans;
 
+import org.apache.logging.log4j.LogManager;
+
 import webArchitecture.persona.v1.models.entities.Persona;
 
 public class PersonaView {
@@ -10,8 +12,6 @@ public class PersonaView {
     private String[] roles;
 
     public PersonaView() {
-        // Se ataca a la Capa de Negocio para conseguir los roles!!!
-        this.roles = new String[] {"uno", "dos", "tres"};
     }
 
     public String getMsg() {
@@ -34,12 +34,17 @@ public class PersonaView {
         this.roles = roles;
     }
 
+    public void update(){
+        LogManager.getLogger(PersonaView.class).debug("Se accede a la capa de negocio para recuperar roles");
+        this.roles = new String[] {"uno", "dos", "tres"};
+    }
+    
     public String process() {
         if (this.persona.getId() == 666 && !this.persona.getNombre().equals("Demonio")) {
             this.msg="Sólo se acepta el nombre 'Demonio'";
             return "persona";
         } else {
-            // Se ataca a la Capa de Negocio para registrar el usuario!!!
+            LogManager.getLogger(PersonaView.class).debug("Se accede a la capa de negocio para registrar persona");
             return "home";
         }
     }

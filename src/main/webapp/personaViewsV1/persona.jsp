@@ -10,7 +10,7 @@
 <body>
 	<h2>Vista de <b>Persona</b></h2>
 	<c:set var="pView" scope="request" value="${persona}" />
-	<c:set var="rView" scope="session" value="${rol}" />
+	<div>${pView.update()}</div>
 	<form action="/WebJSP/v1/persona" method="post">
 		<p>
 			Id: <input name="id" type="text" value="${pView.persona.id}" />

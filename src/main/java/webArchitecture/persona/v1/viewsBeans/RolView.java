@@ -1,5 +1,7 @@
 package webArchitecture.persona.v1.viewsBeans;
 
+import org.apache.logging.log4j.LogManager;
+
 public class RolView {
     private String[] roles;
 
@@ -7,8 +9,6 @@ public class RolView {
 
 
     public RolView() {
-        // Se ataca a la Capa de Negocio para conseguir los roles!!!
-        this.roles = new String[] {"uno", "dos", "tres"};
     }
 
     public String[] getRoles() {
@@ -22,9 +22,14 @@ public class RolView {
     public void setRol(String rol) {
         this.rol = rol;
     }
+    
+    public void update(){
+        LogManager.getLogger(RolView.class).debug("Se accede a la capa de negocio para recuperar roles");
+        this.roles = new String[] {"uno", "dos", "tres"};
+    }
 
     public String process() {
-        // Se ataca a la Capa de Negocio para actualizar los roles!!!
+        LogManager.getLogger(RolView.class).debug("Se accede a la capa de negocio para registrar rol");
         return "rol";
     }
 
