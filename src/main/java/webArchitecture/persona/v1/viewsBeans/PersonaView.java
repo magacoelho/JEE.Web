@@ -34,17 +34,19 @@ public class PersonaView {
         this.roles = roles;
     }
 
-    public void update(){
-        LogManager.getLogger(PersonaView.class).debug("Se accede a la capa de negocio para recuperar roles");
+    public void update() {
+        LogManager.getLogger(PersonaView.class).debug(
+                "Se accede a la capa de negocio para recuperar roles");
         this.roles = new String[] {"uno", "dos", "tres"};
     }
-    
+
     public String process() {
         if (this.persona.getId() == 666 && !this.persona.getNombre().equals("Demonio")) {
-            this.msg="Sólo se acepta el nombre 'Demonio'";
+            this.msg = "Sólo se acepta el nombre 'Demonio'";
             return "persona";
         } else {
-            LogManager.getLogger(PersonaView.class).debug("Se accede a la capa de negocio para registrar persona");
+            LogManager.getLogger(PersonaView.class).debug(
+                    "Se accede a la capa de negocio para registrar persona: " + persona);
             return "home";
         }
     }

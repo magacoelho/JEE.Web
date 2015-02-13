@@ -7,7 +7,6 @@ public class RolView {
 
     private String rol;
 
-
     public RolView() {
     }
 
@@ -22,15 +21,17 @@ public class RolView {
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
-    public void update(){
-        LogManager.getLogger(RolView.class).debug("Se accede a la capa de negocio para recuperar roles");
+
+    public void update() {
+        LogManager.getLogger(RolView.class).debug(
+                "Se accede a la capa de negocio para recuperar roles");
         this.roles = new String[] {"uno", "dos", "tres"};
     }
 
     public String process() {
-        LogManager.getLogger(RolView.class).debug("Se accede a la capa de negocio para registrar rol");
-        return "rol";
+        LogManager.getLogger(RolView.class).debug(
+                "Se accede a la capa de negocio para registrar rol: " + rol);
+        return "home";
     }
 
 }
