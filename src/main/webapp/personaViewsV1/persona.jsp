@@ -11,7 +11,7 @@
 	<h2>Vista de <b>Persona</b></h2>
 	<c:set var="pView" scope="request" value="${persona}" />
 	<div>${pView.update()}</div>
-	<form action="/WebJSP/v1/persona" method="post">
+	<form action="/Web/v1/persona" method="post">
 		<p>Id: <input name="id" type="text" value="${pView.persona.id}" /></p>
 		<p>Nombre: <input name="nombre" type="text" value="${pView.persona.nombre}" />${pView.errorMsg}</p>
 		<p>Roles:
@@ -26,7 +26,7 @@
 		</p>
 	</form>
 	<p>
-		<a href="/WebJSP/v1/home">Volver a Home</a>
+		<a href="/Web/v1/home">Volver a Home</a>
 	</p>
 </body>
 </html>
