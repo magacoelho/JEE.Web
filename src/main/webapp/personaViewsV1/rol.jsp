@@ -8,9 +8,11 @@
 <title>RolView</title>
 </head>
 <body>
-	<h1>Vista de <b>Rol</b></h1>
+	<h1>
+		Vista de <b>Rol</b>
+	</h1>
 	<c:set var="rView" scope="request" value="${rol}" />
-    <div>${rView.update()}</div>
+	<div>${rView.update()}</div>
 	<form action="/Web/v1/rol" method="post">
 		<p>Rol actuales:</p>
 		<ul>
@@ -25,6 +27,8 @@
 			<input type="submit" value="Enviar" />
 		</p>
 	</form>
-    <p><a href="/Web/v1/home">Volver a Home</a></p>
+	<p>
+		<a href="/Web/v1/home">Volver a Home</a>
+	</p>
 </body>
 </html>

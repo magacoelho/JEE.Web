@@ -8,14 +8,20 @@
 <title>PersonaView</title>
 </head>
 <body>
-	<h2>Vista de <b>Persona</b></h2>
+	<h2>
+		Vista de <b>Persona</b>
+	</h2>
 	<c:set var="pView" scope="request" value="${persona}" />
 	<div>${pView.update()}</div>
 	<form action="/Web/v1/persona" method="post">
-		<p>Id: <input name="id" type="text" value="${pView.persona.id}" /></p>
-		<p>Nombre: <input name="nombre" type="text" value="${pView.persona.nombre}" />${pView.errorMsg}</p>
-		<p>Roles:
-		    <select name="rol">   
+		<p>
+			Id: <input name="id" type="text" value="${pView.persona.id}" />
+		</p>
+		<p>
+			Nombre: <input name="nombre" type="text"
+				value="${pView.persona.nombre}" />${pView.errorMsg}</p>
+		<p>
+			Roles: <select name="rol">
 				<c:forEach var="rol" items="${pView.roles}">
 					<option value="${rol}">${rol}</option>
 				</c:forEach>
