@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF 2.0</title>
+</h:head>
+<h:body>
+	<h3>JSF 2.0: Tags</h3>
+	<h:form id="tags">
+		<h:panelGrid columns="4">
+			<h:outputText value="h:inputText:" />
+			<h:inputText id="text" value="#{tags.text}" cols="2" />
+			<h:outputText value="h:inputSecret:" />
+			<h:inputSecret redisplay="true" value="#{tags.secret}" />
+			<h:outputText value="h:inputHidden:" />
+			<h:inputHidden value="tags.hidden" />
+			<h:outputText value="h:inputTextarea:" />
+			<h:inputTextarea id="textArea" rows="4" cols="7" value="#{tags.area}" />
+			<h:selectBooleanCheckbox id="cb" title="Checkbox"
+				value="#{tags.checkbox}" />
+			<h:outputLabel for="cb" value="h:selectBooleanCheckbox" />
+			<p>h:selectManyCheckbox:</p>
+			<h:selectManyCheckbox value="#{tags.manyCheckbox}">
+				<f:selectItem itemValue="1" itemLabel="Uno" />
+				<f:selectItem itemValue="2" itemLabel="Dos" />
+			</h:selectManyCheckbox>
+			<p>h:selectManyCheckbox (Map):</p>
+			<h:selectManyCheckbox value="#{tags.manyCheckboxMap}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyCheckbox>
+			<p>h:selectOneListbox:</p>
+			<h:selectOneListbox value="#{tags.oneListbox}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectOneListbox>
+			<p>h:selectManyListbox:</p>
+			<h:selectManyListbox value="#{tags.manyListbox}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyListbox>
+			<p>h:selectOneMenu:</p>
+			<h:selectOneMenu value="#{tags.oneMenu}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectOneMenu>
+			<p>h:selectManyMenu:</p>
+			<h:selectManyMenu value="#{tags.manyMenu}">
+				<f:selectItems value="#{tags.mapValue}" />
+			</h:selectManyMenu>
+			<p>h:link:</p>
+			<h:link value="Enlace con parámetros a holaJSF.jsf" outcome="holaJSF">
+				<f:param name="nombre" value="enlace" />
+			</h:link>
+			<p>Entity:</p>
+			<h:inputText value="#{tags.entity.property}" />
+			<h:outputText value=" " />
+			<h:outputText value=" " />
+
+			<p>h:commandLink:</p>
+			<h:commandLink value="reset" type="reset" />
+			<p>h:commandButton:</p>
+			<h:commandButton value="submit" type="submit"
+				action="#{tags.process}" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

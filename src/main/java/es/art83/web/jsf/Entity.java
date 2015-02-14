@@ -10,4 +10,14 @@ public class Entity {
     public String getProperty() {
         return property;
     }
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
+
+    @Override
+    public String toString() {
+        return "Entity[property=" + property + "]";
+    }
+   
 }
