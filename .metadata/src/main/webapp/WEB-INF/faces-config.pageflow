@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14238990501301" configfile="/JEE.Web/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="navigator.xhtml" x="122" y="178" id="pf14242540588480" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" outlinks="pf14242540588541 pf14242540588542 pf142425434750010 pf142425542116211" inlinks="pf142425434750010" path="/jsf/navigator.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="rule1Page.xhtml" x="338" y="178" id="pf14242540588545" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14242540588541 pf142425542116211" path="/jsf/rule1Page.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="rule2.xhtml" x="338" y="562" id="pf14242540588556" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14242540588542" path="/jsf/rule2Page.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="rule1.xhtml" x="122" y="562" id="pf14242540588557" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" path="/jsf/rule1Page.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="navigator.xhtml" x="122" y="946" id="pf14242541326809" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" path="/jsf/navigator.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="navigator.xhtml" x="60" y="300" id="pf14242540588480" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" outlinks="pf14242540588541 pf14242540588542 pf142425434750010 pf142425542116211 pf142425603194612" inlinks="pf142425434750010" path="/jsf/navigator.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="rule1Page.xhtml" x="276" y="264" id="pf14242540588545" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14242540588541 pf142425542116211" path="/jsf/rule1Page.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="rule2.xhtml" x="288" y="348" id="pf14242540588556" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14242540588542" path="/jsf/rule2Page.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="navigator.xhtml" x="122" y="1234" id="pf14242541326809" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" path="/jsf/navigator.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="jsf/staticPage.xhtml" x="135" y="432" id="pf142425603194613" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf142425603194612" path="/jsf/staticPage.xhtml"/>
   <links id="pf14242540588541" target="pf14242540588545" source="pf14242540588480" outcome="rule1"/>
   <links id="pf14242540588542" target="pf14242540588556" source="pf14242540588480" outcome="rule2"/>
   <links id="pf142425542116211" target="pf14242540588545" source="pf14242540588480" outcome="rule2"/>
+  <links id="pf142425603194612" target="pf142425603194613" source="pf14242540588480" outcome="staticPage"/>
   <links id="pf142425434750010" target="pf14242540588480" source="pf14242540588480">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
