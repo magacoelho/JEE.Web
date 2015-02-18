@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF 2.0</title>
+</h:head>
+<h:body>
+	<h3>JSF 2.0: i18n</h3>
+	<p>Navegador: (#{facesContext.externalContext.requestLocale})</p>
+	<p>Bean: (#{i18n.locale})</p>
+	
+	<f:view locale="#{i18n.locale}">
+		<p>#{msgs.key1}</p>
+		<p>#{msgs.keyJava}... #{i18n.msg("key1")}</p>  
+
+		<p><h:outputText value="#{i18n.date}">
+			<f:convertDateTime dateStyle="full" />
+		</h:outputText><br/>
+		
+		<h:outputText value="#{i18n.number}">
+			<f:convertNumber />
+		</h:outputText></p>
+		
+		<h:outputFormat value="#{msgs.key2}">
+			<f:param value="#{i18n.parameter}" /> 
+		</h:outputFormat>
+		
+		<h:form>
+ 			<h:commandLink action="#{i18n.change('es')}" value="Español" /> | 
+            <h:commandLink action="#{i18n.change('en')}" value="English" />
+		</h:form>
+	</f:view>
+</h:body>
+</html>
