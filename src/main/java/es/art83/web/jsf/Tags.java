@@ -7,7 +7,7 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class Tags {
-    private String text;
+    private String text = "inicial";
 
     private String secret;
 
