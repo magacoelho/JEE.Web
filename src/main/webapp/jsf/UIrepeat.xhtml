@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF 2.0</title>
+	<style>
+		.par {
+			color:red;
+		}
+		
+	</style>
+</h:head>
+<h:body>
+	<h3>JSF 2.0: ui:repeat</h3>
+	<h:form>
+		<ul>
+			<ui:repeat var="o" value="#{collectionBean.list}" varStatus="estado" offset="0" step="1">
+				<h:outputText value=" y por último " rendered="#{estado.last}"/>
+				<ui:fragment rendered="#{estado.even}">
+					<li class="par">#{o.id}, #{o.name},#{o.quantity}</li>  
+				</ui:fragment>
+				<ui:fragment  rendered="#{estado.odd}">
+					<li>#{o.id}, #{o.name},#{o.quantity}</li>
+				</ui:fragment>
+			</ui:repeat>
+		</ul>
+	</h:form>
+</h:body>
+</html>
