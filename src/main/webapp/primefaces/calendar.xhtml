@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"        
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Primefaces</title>
+</h:head>
+<h:body>
+	<h1>Popup Calendar</h1>
+	<p:calendar value="#{calendarBean.date}" id="popupCal" />
+	<p:dialog header="Selected Dates" widgetVar="dialog" showEffect="fade"
+		hideEffect="fade">
+		<h:outputText value="#{calendarBean.date}" id="popupDate">
+			<f:convertDateTime pattern="d/M/yyyy" />
+		</h:outputText>
+	</p:dialog>
+</h:body>
+</html>
