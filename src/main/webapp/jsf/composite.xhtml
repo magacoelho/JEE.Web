@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:u="http://java.sun.com/jsf/composite/utils">   
+    <h:head>
+        <title>JSF 2.0</title>
+	<style>
+		.red {color: red;}
+	</style>
+    </h:head>
+    <h:body>
+    	<h3>JSF 2.0. Composite</h3>
+    	<u:myComponent attr="atributo"/>
+    	<u:myComponent />
+    	<u:myComponent styleClass="red"/>
+    	<u:list caption="Mi Lista" value="#{composite.list}" styleClass="red"/>
+    </h:body>
+</html>
