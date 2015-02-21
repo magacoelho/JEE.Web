@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF 2.0</title>
+</h:head>
+<h:body>
+	<h3>ciclo de Vida</h3>
+	<h:form id="form">
+		<f:event listener="#{lifeCycle.postAddToView}" type="postAddToView" />
+		<f:event listener="#{lifeCycle.preValidate}" type="preValidate" />
+		<f:event listener="#{lifeCycle.postValidate}" type="postValidate" />
+		<f:event listener="#{lifeCycle.preRenderComponent}"
+			type="preRenderComponent" />
+		<h:messages for="form" style="color:red" />
+		<h:panelGrid columns="3">
+			<h:outputText value="I:" />
+			<h:inputText id="i" value="#{lifeCycle.i}" required="true">
+			</h:inputText>
+			<h:message for="i" style="color:red" />
+			<h:outputText value="I2:" />
+			<h:inputText id="i2" value="#{lifeCycle.i2}" required="true"
+				immediate="true">
+				<f:validateLength minimum="2" maximum="8" />
+			</h:inputText>
+			<h:message for="i2" style="color:red" />
+
+			<h:outputText value="cb:" />
+			<h:selectBooleanCheckbox id="b" value="#{lifeCycle.b}"
+				valueChangeListener="#{lifeCycle.valueChangeListener}"
+				onclick="this.form.submit()" />
+			<h:message for="b" style="color:red" />
+
+		</h:panelGrid>
+		<h:commandButton value="actionListener"
+			actionListener="#{lifeCycle.actionListener}" />
+		<h:commandButton value="actionListener-action"
+			actionListener="#{lifeCycle.actionListener}"
+			action="#{lifeCycle.process}" />
+		<h:commandButton value="action" action="#{lifeCycle.process}" />
+	</h:form>
+</h:body>
+</html>

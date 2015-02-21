@@ -10,7 +10,7 @@
 	<h3>Ciclo de Vida</h3>
 	<h:form id="form">
 			<h:outputText value="I:" />
-			<h:inputText id="i" value="#{blc.i}" required="true" immediate="false"/>
+			<h:inputText id="i" value="#{blc.i}" required="true" immediate="true"/>
 			<h:message for="i" style="color:red" />
 		<h:commandButton value="action" action="#{blc.process}" />
 	</h:form>
