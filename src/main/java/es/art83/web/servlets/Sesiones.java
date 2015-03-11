@@ -27,6 +27,7 @@ public class Sesiones extends HttpServlet {
         if (session.isNew()) {
             out.println("<h1>Gracias por acceder al servidor</h1>");
             session.setAttribute("accesos", 1);
+            
         } else {
             out.println("<h1>Gracias por volver</h1>");
             out.println("<p>Identificador de sesion: " + session.getId());

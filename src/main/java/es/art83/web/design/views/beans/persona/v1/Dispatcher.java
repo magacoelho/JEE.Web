@@ -20,7 +20,8 @@ public class Dispatcher extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String action = request.getPathInfo().substring(1);
+        String action = request.getPathInfo().substring(1);//extraigo el nombre de la accion...
+        												  //quitando la barra
 
         String view;
         switch (action) {

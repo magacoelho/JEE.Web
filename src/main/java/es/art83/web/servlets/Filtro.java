@@ -19,12 +19,12 @@ public class Filtro implements Filter {
 
     public void destroy() {
     }
-
+// para saber el tiempo medio entre peticiones. (esto para las dos "rutas" mapeadas-- en WebFilter.
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         long antes = System.currentTimeMillis();
-
-        chain.doFilter(request, response);
+        
+        chain.doFilter(request, response); // lamada progresa... reenvio?
 
         LogManager.getLogger(Filtro.class).info(
                 "Tiempo de proceso(" + (System.currentTimeMillis() - antes) + " ms)");
